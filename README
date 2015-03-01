@@ -1,0 +1,4 @@
+Amazon FireTV (bueller) Kexecboot Kernel Builder
+-----------------------------------------------------
+
+This repository contains the files required to build a kexec-hardboot supporting kernel with the kexecboot GUI for the Amazon FireTV.  It builds the kernel and packs an Android-style boot.img with the included ramdisk.  I've included the kernel source as well as the source for my modified version of kexecboot as submodules in this repository.  I am not currently building the kexecboot binary as part of mkbootzip.sh because it must be built for ARM and I don't know how to cross compile it.  If you wish to compile your own kexecboot binary, use an ARM system.  Then copy the compiled binary into the ramdisk/bin directory and run mkbootzip.sh to build a flashable zip containing your custom built kexecboot.  A default binary has been included which does work with the FireTV if you do not wish to build your own kexecboot binary.
